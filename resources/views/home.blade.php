@@ -2,7 +2,7 @@
     <x-dklog::meta-tags
         :title="$metaTags['meta_title'] ?? null"
         :description="$metaTags['meta_description'] ?? null"
-        :image="$metaTags['meta_image'] ?? null"/>
+        :image="Phuclh\DKLog\DK::resolveImageUrl($metaTags['meta_image'] ?? null)"/>
 @endpush
 
 <div class="max-w-4xl mx-auto pt-4 pb-2 md:pt-8 font-mono">
