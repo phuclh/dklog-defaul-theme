@@ -19,7 +19,7 @@ class DKLogDefaultTheme extends AddonsServiceProvider
         ], 'dklog-default-theme-assets');
 
         $this->publishes([
-            $this->basePath('/../resources/views') => base_path('resources/views/phuclh/dklog-default-theme'),
+            $this->basePath('/../resources/views') => resource_path('views/vendor/dklog'),
         ], 'dklog-default-theme-views');
     }
 }
