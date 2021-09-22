@@ -1,0 +1,29 @@
+{
+    "name": "phuclh/dklog-default-theme",
+    "description": "Just a default theme for DKLog",
+    "keywords": [
+        "dklog",
+        "blog"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^8.0",
+        "phuclh/dklog": "dev-main"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/phuclh/dklog.git"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Phuclh\\DKLogDefaultTheme\\": "src/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
