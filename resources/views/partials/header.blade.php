@@ -1,6 +1,6 @@
 <div class="md:flex px-6 items-center">
     <div class="flex-shrink-0">
-        <a href="{{ route('home') }}">
+        <a href="{{ route('home') }}" title="{{ config('app.name') }}">
             <img class="hidden dark:hidden md:inline-block md:dark:hidden md:max-w-[200px]" src="{{ asset('vendor/dklog/images/logo-dark.svg') }}" alt="{{ config('app.name') }}">
             <img class="hidden md:dark:inline-block md:dark:max-w-[200px]" src="{{ asset('vendor/dklog/images/logo.svg') }}" alt="{{ config('app.name') }}">
         </a>
