@@ -7,6 +7,8 @@
 @endpush
 
 <div class="max-w-4xl mx-auto pt-4 pb-2 md:pt-8 font-mono">
+    <x-slot name="title">{{ $post->title }}</x-slot>
+
     @include('dklog::partials.header')
 
     <div class="container mx-auto px-5">
