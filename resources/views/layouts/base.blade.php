@@ -21,7 +21,7 @@
     @livewireStyles
 
     <!-- Theme Scripts -->
-    @foreach(\Phuclh\DKLog\DK::themeStyles() as $publicPath)
+    @foreach(\Phuclh\DKLog\DK::themeScripts() as $publicPath)
         <script src="{{ $publicPath }}" defer></script>
     @endforeach
 </head>
