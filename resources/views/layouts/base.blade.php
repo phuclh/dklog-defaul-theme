@@ -24,6 +24,10 @@
     @foreach(\Phuclh\DKLog\DK::themeScripts() as $publicPath)
         <script src="{{ $publicPath }}" defer></script>
     @endforeach
+
+    @if (config('dk.fathom.site_id'))
+        <script src="{{ config('dk.fathom.tracking_script_url') }}" data-site="{{ config('dk.fathom.site_id') }}" defer></script>
+    @endif
 </head>
 <body class="font-sans antialiased dark:bg-black">
 
