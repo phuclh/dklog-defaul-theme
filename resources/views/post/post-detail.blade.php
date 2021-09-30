@@ -45,17 +45,17 @@
             </div>
         </article>
 
-        <div class="uppercase flex items-center flex-1 mt-10 py-8 justify-between">
+        <div class="uppercase sm:grid sm:grid-cols-2 sm:gap-4 sm:space-y-0 space-y-4 mt-10 py-8">
             @if ($previousPost = $post->previousPost())
                 <a href="{{ $previousPost->link }}" rel="prev" class="flex items-center text-gray-800 hover:underline dark:text-blue-200">
                     <x-heroicon-o-arrow-left class="w-4 h-4"/>
-                    <span class="ml-2">{{ $previousPost->title }}</span>
+                    <span class="ml-2 truncate">{{ $previousPost->title }}</span>
                 </a>
             @endif
 
             @if ($nextPost = $post->nextPost())
                 <a href="{{ $nextPost->link }}" rel="next" class="flex items-center text-gray-800 hover:underline dark:text-blue-200">
-                    <span class="mr-2">{{ $nextPost->title }}</span>
+                    <span class="mr-2 truncate">{{ $nextPost->title }}</span>
                     <x-heroicon-o-arrow-right class="w-4 h-4"/>
                 </a>
             @endif
