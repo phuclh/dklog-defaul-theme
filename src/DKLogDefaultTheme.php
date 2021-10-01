@@ -8,18 +8,15 @@ class DKLogDefaultTheme extends AddonsServiceProvider
     public function boot()
     {
         DK::booted(function () {
-            DK::themeStyle(asset('/phuclh/dklog-default-theme/css/theme.css'));
-            DK::themeScript(asset('/phuclh/dklog-default-theme/js/theme.js'));
+            DK::themeStyle(asset($this->key() . '/css/theme.css'));
+            DK::themeScript(asset($this->key() . '/js/theme.js'));
         });
 
-        $this->loadViewsFrom($this->basePath('/../resources/views'), 'dklog');
+        $this->registerThemeViews();
+    }
 
-        $this->publishes([
-            $this->basePath('/../resources/dist') => public_path('phuclh/dklog-default-theme'),
-        ], 'dklog-default-theme-assets');
-
-        $this->publishes([
-            $this->basePath('/../resources/views') => resource_path('views/vendor/dklog'),
-        ], 'dklog-default-theme-views');
+    public function key(): string
+    {
+        return 'phuclh/dklog-default-theme';
     }
 }
