@@ -1,8 +1,8 @@
 @push('seo')
     <x-dklog::meta-tags
-        :title="$metaTags['meta_title'] ?? null"
-        :description="$metaTags['meta_description'] ?? null"
-        :image="Phuclh\DKLog\DK::resolveImageUrl($metaTags['meta_image'] ?? null)"/>
+            :title="$metaTags['meta_title'] ?? null"
+            :description="$metaTags['meta_description'] ?? null"
+            :image="Phuclh\DKLog\DK::resolveImageUrl($metaTags['meta_image'] ?? null)"/>
 @endpush
 
 <div class="max-w-4xl mx-auto pt-4 pb-2 md:pt-8 font-mono">
@@ -32,9 +32,11 @@
             </p>
         @endforelse
 
-        <div class="py-8">
-            {{ $posts->links('dklog::admin.partials.pagination.simple') }}
-        </div>
+        @if ($posts->hasPages())
+            <div class="py-8">
+                {{ $posts->links('dklog::admin.partials.pagination.simple') }}
+            </div>
+        @endif
     </div>
 </div>
 
