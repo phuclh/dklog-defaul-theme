@@ -11,18 +11,16 @@
     @include('dklog::partials.header')
 
     <div class="container mx-auto px-5">
-        <div class="mb-14">
+        <div class="mb-10">
             <h1 class="leading-normal block text-gray-800 text-4xl font-semibold dark:text-white">
                 {{ $page->title }}
             </h1>
 
-            <p class="text-sm mt-2 uppercase dark:text-blue-200">
-                <span>{{ $page->updated_at->format('F d, Y') }}</span>
-
-                @auth
-                    | <span><a href="{{ route('admin.pages.edit', $page) }}" class="hover:underline">Edit</a></span>
-                @endif
-            </p>
+            @auth
+                <p class="text-sm mt-2 uppercase dark:text-blue-200">
+                    <span><a href="{{ route('admin.pages.edit', $page) }}" class="hover:underline">Edit</a></span>
+                </p>
+            @endif
         </div>
 
         <article class="prose dark:prose-light max-w-none leading-10">
