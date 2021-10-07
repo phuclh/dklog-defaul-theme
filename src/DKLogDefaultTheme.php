@@ -1,9 +1,9 @@
 <?php namespace Phuclh\DKLogDefaultTheme;
 
 use Phuclh\DKLog\DK;
-use Phuclh\DKLog\AddonsServiceProvider;
+use Phuclh\DKLog\Theme;
 
-class DKLogDefaultTheme extends AddonsServiceProvider
+class DKLogDefaultTheme extends Theme
 {
     public function boot()
     {
