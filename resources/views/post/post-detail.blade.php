@@ -18,6 +18,9 @@
             </h1>
 
             <p class="text-sm mt-2 uppercase dark:text-blue-200">
+                @if ($post->hasCategory())
+                    In <a href="{{ route('categories.show', $post->category) }}" class="hover:underline">{{ $post->category->name }}</a> |
+                @endif
                 <span>{{ $post->updated_at->format('F d, Y') }} —</span>
                 <span>{{ $post->readingDuration }} Read</span>
 
