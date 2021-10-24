@@ -2,6 +2,8 @@
 
 use Phuclh\DKLog\DK;
 use Phuclh\DKLog\Theme;
+use Phuclh\DKLog\View\Data\Component;
+use Phuclh\DKLogDefaultTheme\ViewData\RecentPostsViewData;
 
 class DKLogDefaultTheme extends Theme
 {
@@ -13,6 +15,9 @@ class DKLogDefaultTheme extends Theme
         });
 
         $this->registerThemeViews();
+        $this->registerViewData(Component::HOME, [
+            new RecentPostsViewData
+        ]);
     }
 
     public function key(): string
