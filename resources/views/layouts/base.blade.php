@@ -5,6 +5,8 @@
 </head>
 <body class="font-sans antialiased dark:bg-black">
 
+@livewire('admin-bar')
+
 {{ $slot }}
 
 <footer class="py-8 text-center text-sm text-gray-500 dark:text-blue-200">
@@ -14,6 +16,8 @@
         Follow the <a href="{{ url(config('feed.feeds.main.url')) }}" target="_blank" class="text-gray-600 hover:underline dark:text-white">RSS Feed</a>.
     @endif
 </footer>
+
+@livewireScripts
 
 @stack('scripts')
 

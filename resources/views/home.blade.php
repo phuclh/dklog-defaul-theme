@@ -39,7 +39,3 @@
         @endif
     </div>
 </div>
-
-@push('scripts')
-    @livewireScripts
-@endpush
