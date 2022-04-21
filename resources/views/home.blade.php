@@ -10,7 +10,7 @@
 
     <div class="container mx-auto px-5">
         @forelse ($posts as $post)
-            <a href="{{ $post->link}}" class="transform hover:-translate-y-2 duration-200 block">
+            <a href="{{ $post->link }}" class="transform hover:-translate-y-2 duration-200 block">
                 <div class="w-full mb-10 p-5 bg-gray-100 rounded dark:bg-[#04243f]">
                     <h2 class="leading-normal block text-gray-800 text-xl font-semibold dark:text-white">
                         {{ $post->title }}

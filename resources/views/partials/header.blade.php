@@ -1,8 +1,36 @@
-<header class="container mx-auto">
+<header class="mt-6 sm:mt-4 container mx-auto">
     <div class="flex items-baseline px-6 md:px-8 pt-4 pb-8">
         <a href="{{ route('home') }}" class="md:inline-flex md:items-baseline font-bold text-base uppercase dark:text-white">
             <span class="text-gray-800">{{ config('app.name') }}</span>
         </a>
+
+        <nav class="ml-auto flex items-baseline uppercase text-sm">
+            <form action="{{ route('search') }}" method="GET">
+                <label for="search" class="sr-only">Search</label>
+                <div class="relative">
+                    <div class="pointer-events-none absolute inset-y-0 left-0 pl-3 flex items-center">
+                        <x-heroicon-s-search class="h-5 w-5 text-gray-400"/>
+                    </div>
+                    <input
+                            x-data="{
+                                blacklistTags: ['INPUT', 'TEXTAREA']
+                            }"
+                            x-on:keydown.window="
+                                if ($event.keyCode === 191 && !blacklistTags.includes($event.target.tagName)) {
+                                    $event.preventDefault();
+                                    $refs['searchInput'].focus();
+                                }
+                            "
+                            value="{{ request('query') }}"
+                            x-ref="searchInput"
+                            id="search"
+                            name="query"
+                            class="block w-full bg-white border border-gray-300 rounded-md py-2 pl-10 pr-3 text-sm placeholder-gray-500 focus:outline-none focus:text-gray-900 focus:placeholder-gray-400 focus:ring-1 focus:ring-black focus:border-black sm:text-sm"
+                            placeholder="Press / to search"
+                            type="search">
+                </div>
+            </form>
+        </nav>
     </div>
 
     <div class="md:flex px-6 items-center">

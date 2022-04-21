@@ -15,6 +15,7 @@ class DKLogDefaultTheme extends Theme
         });
 
         $this->registerThemeViews();
+        $this->publishThemeAssets();
         $this->registerViewData(Component::HOME, [
             new RecentPostsViewData
         ]);
