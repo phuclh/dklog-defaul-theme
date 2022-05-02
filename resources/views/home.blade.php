@@ -34,7 +34,7 @@
 
         @if ($posts->hasPages())
             <div class="py-8">
-                {{ $posts->links('dklog::admin.partials.pagination.simple') }}
+                {{ $posts->links('dklog::partials.pagination.simple') }}
             </div>
         @endif
     </div>
