@@ -1,9 +1,9 @@
 @push('seo')
     <x-dklog::meta-tags
-        :title="$post->metaTag->title"
-        :description="$post->metaTag->description"
-        :image="$post->metaTag->imageUrl"
-        type="article"/>
+            :title="$post->metaTag->title"
+            :description="$post->metaTag->description"
+            :image="$post->metaTag->imageUrl"
+            type="article"/>
 @endpush
 
 <div class="max-w-4xl mx-auto pt-4 pb-2 md:pt-8 font-mono">
@@ -13,13 +13,17 @@
 
     <div class="container mx-auto px-5">
         <div class="mb-14">
+            <div class="pb-6">
+                {{ breadcrumbs('post', $post) }}
+            </div>
+
             <h1 class="leading-normal block text-gray-800 text-4xl font-semibold dark:text-white">
                 {{ $post->title }}
             </h1>
 
             <p class="text-sm mt-2 uppercase dark:text-blue-200">
                 @if ($post->hasCategory())
-                    In <a href="{{ route('categories.show', $post->category) }}" class="hover:underline">{{ $post->category->name }}</a> |
+                    In <a href="{{ route('content.show', $post->category) }}" class="hover:underline">{{ $post->category->name }}</a> |
                 @endif
                 <span>{{ $post->updated_at->format('F d, Y') }} —</span>
                 <span>{{ $post->readingDuration }} Read</span>

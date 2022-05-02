@@ -6,6 +6,10 @@
     @include('dklog::partials.header')
 
     <div class="container mx-auto px-5">
+        <div class="pb-6">
+            {{ breadcrumbs('search') }}
+        </div>
+
         <h1 class="leading-normal block text-gray-900 text-3xl font-bold dark:text-white">
             Search
         </h1>
@@ -22,6 +26,7 @@
                         name="query"
                         class="block w-full bg-white border border-gray-300 rounded-md py-2 pl-10 pr-3 text-base placeholder-gray-500 focus:outline-none focus:text-gray-900 focus:placeholder-gray-400 focus:ring-1 focus:ring-black focus:border-black sm:text-lg"
                         placeholder="Search"
+                        autofocus
                         type="search">
             </div>
         </form>

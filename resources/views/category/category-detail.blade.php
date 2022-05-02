@@ -9,6 +9,10 @@
     @include('dklog::partials.header')
 
     <div class="container mx-auto px-5">
+        <div class="pb-6">
+            {{ breadcrumbs('category', $category) }}
+        </div>
+
         <h1 class="leading-normal block text-gray-800 text-2xl font-semibold dark:text-white pb-6">
             Category: {{ $category->name }}
         </h1>

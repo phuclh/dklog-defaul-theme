@@ -1,10 +1,10 @@
 <header class="mt-6 sm:mt-4 container mx-auto">
-    <div class="flex items-baseline px-6 md:px-8 pt-4 pb-8">
+    <div class="sm:flex sm:items-baseline px-6 md:px-8 pt-4 pb-4 sm:pb-8">
         <a href="{{ route('home') }}" class="md:inline-flex md:items-baseline font-bold text-base uppercase dark:text-white">
             <span class="text-gray-800">{{ config('app.name') }}</span>
         </a>
 
-        <nav class="ml-auto flex items-baseline uppercase text-sm">
+        <nav class="ml-auto flex items-baseline uppercase text-sm mt-4 sm:mt-0">
             <form action="{{ route('search') }}" method="GET">
                 <label for="search" class="sr-only">Search</label>
                 <div class="relative">

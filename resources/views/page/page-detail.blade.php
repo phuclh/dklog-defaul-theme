@@ -12,6 +12,10 @@
 
     <div class="container mx-auto px-5">
         <div class="mb-10">
+            <div class="pb-6">
+                {{ breadcrumbs('page', $page) }}
+            </div>
+
             <h1 class="leading-normal block text-gray-800 text-4xl font-semibold dark:text-white">
                 {{ $page->title }}
             </h1>
