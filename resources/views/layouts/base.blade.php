@@ -2,6 +2,8 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <x-dklog::head/>
+
+    @stack('styles')
 </head>
 <body class="font-sans antialiased dark:bg-black">
 
